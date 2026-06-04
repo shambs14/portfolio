@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: rgb(10, 3, 3);
+    color: rgb(115, 163, 2);
+}
+
+.userInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    min-height: 100vh;
+}
+
+.leftDiv{
+    flex: 1;
+}
+
+.leftDiv h1{
+    font-size: 3rem;
+    color: rgb(214, 218, 20);
+    margin-bottom: 20px;
+}
+
+.leftDiv p{
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.btn{
+    background-color: rgb(214, 218, 20);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn:hover{
+    background-color: rgb(228, 217, 65);
+    cursor: pointer;
+}
+
+.rightDiv{
+    flex: 1;
+    text-align: center;
+}
+
+.rightDiv img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid green;
+    object-fitcover;
+}
+
+.about,
+.skills,
+.projects{
+    padding: 40px 80px;
+}
+
+.about h2,
+.skills h2,
+.projects h2{
+    color: green;
+    margin-bottom: 15px;
+}
+
+.about p{
+    line-height: 1.8;
+}
+
+.skills ul{
+    margin-left: 20px;
+}
+
+.skills li{
+    margin-bottom: 10px;
+}
+
+.project-card{
+    background-color: #313030;
+    padding: 20px;
+    margin-top: 15px;
+    border-left: 5px solid rgb(39, 94, 8);
+    border-radius: 5px;
+}
+
+.project-card h3{
+    color: green;
+    margin-bottom: 10px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #3d3b3b;
+    margin-top: 30px;
+}
+</style>
+
+</head>
+<body>
+
+<section class="userInfo">
+    <div class="leftDiv">
+        <h1>Hi, I'm Shambhavi</h1>
+
+        <p>
+            I am a beginner web developer and computer engineering student.
+            I enjoy learning HTML, CSS, C++, and creating simple websites.
+            My goal is to improve my coding skills and build useful projects.
+        </p>
+
+        <button class="btn">Contact Me</button>
+    </div>
+
+    <div class="rightDiv">
+        <img src="c:\Users\admin\Pictures\face image.jpg" alt="Profile Photo">
+    </div>
+</section>
+
+<section class="about">
+    <h2>About Me</h2>
+    <p>
+        I am passionate about technology and web development.
+        I am currently learning frontend development and working on academic projects.
+        I enjoy creating websites and exploring new programming concepts.
+    </p>
+</section>
+
+<section class="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>C++ Programming</li>
+        <li>Problem Solving</li>
+    </ul>
+</section>
+
+<section class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+        <h3>Student Management System</h3>
+        <p>A python-based project for managing student records and information.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Good Website</h3>
+        <p>A responsive portfolio website developed using HTML and CSS.</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Shambhavi | Portfolio</p>
+</footer>
+
+</body>
+</html>

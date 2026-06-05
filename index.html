@@ -4,27 +4,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Portfolio</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
 <style>
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                 'Lucida Grande', 'Lucida Sans',
+                 Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background-color: rgb(10, 3, 3);
-    color: rgb(115, 163, 2);
+    background-color: black;
+    color: white;
 }
+
+/* Navbar */
+
+.Navbar{
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    margin: 20px auto;
+    background-color: #726f6f;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.navItem{
+    color: #45cc10;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navItem:hover{
+    border-bottom: 1px solid #949090;
+}
+
+/* Hero Section */
 
 .userInfo{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
-    padding: 50px;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
     min-height: 100vh;
+    gap: 50px;
 }
 
 .leftDiv{
@@ -32,18 +66,21 @@ body{
 }
 
 .leftDiv h1{
-    font-size: 3rem;
-    color: rgb(214, 218, 20);
+    font-size: 48px;
+    color: rgb(214,218,20);
+    text-shadow: 3px 3px 4px rgb(7, 56, 2),
+                 5px 5px 3px rgb(6, 179, 29);
     margin-bottom: 20px;
 }
 
 .leftDiv p{
     line-height: 1.8;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 25px;
 }
 
 .btn{
-    background-color: rgb(214, 218, 20);
+    background-color: rgb(235, 231, 46);
     padding: 12px 24px;
     border: none;
     border-radius: 5px;
@@ -51,7 +88,7 @@ body{
 }
 
 .btn:hover{
-    background-color: rgb(228, 217, 65);
+    background-color: rgb(208, 235, 59);
     cursor: pointer;
 }
 
@@ -65,8 +102,10 @@ body{
     height: 300px;
     border-radius: 50%;
     border: 5px solid green;
-    object-fitcover;
+    object-fit: cover;
 }
+
+/* Common Section */
 
 .about,
 .skills,
@@ -77,7 +116,7 @@ body{
 .about h2,
 .skills h2,
 .projects h2{
-    color: green;
+    color: rgb(214,218,20);
     margin-bottom: 15px;
 }
 
@@ -93,18 +132,62 @@ body{
     margin-bottom: 10px;
 }
 
+/* Project Cards */
+
 .project-card{
     background-color: #313030;
     padding: 20px;
     margin-top: 15px;
-    border-left: 5px solid rgb(39, 94, 8);
+    border-left: 5px solid green;
     border-radius: 5px;
 }
 
 .project-card h3{
-    color: green;
+    color: rgb(235, 238, 76);
     margin-bottom: 10px;
 }
+
+.project-card p{
+    line-height: 1.6;
+}
+
+/* Contact Form */
+
+.registerForm{
+    background-color: #1B1B1B;
+    width: 40%;
+    margin: 40px auto;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+label{
+    font-size: 20px;
+}
+
+sup{
+    color: red;
+}
+
+input.textDemo{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+input:focus{
+    background-color: green;
+}
+
+.centerBTN{
+    width: 100%;
+}
+
+/* Footer */
 
 footer{
     text-align: center;
@@ -112,12 +195,45 @@ footer{
     background-color: #3d3b3b;
     margin-top: 30px;
 }
-</style>
 
+/* Back To Top */
+
+.topArrow{
+    width: 60px;
+    height: 60px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1B1B1B;
+}
+
+</style>
 </head>
 <body>
 
+     <div id="IAMTOP"></div>
+
+<nav class="Navbar">
+    <a href="#" class="navItem">Home</a>
+    <a href="#about" class="navItem">About</a>
+    <a href="#skills" class="navItem">Skills</a>
+    <a href="#projects" class="navItem">Projects</a>
+    <a href="#contact" class="navItem">Contact Me</a>
+
+    <div>
+        <a href="#" class="navItem"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" class="navItem"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="navItem"><i class="fa-brands fa-github"></i></a>
+    </div>
+</nav>
+
 <section class="userInfo">
+
     <div class="leftDiv">
         <h1>Hi, I'm Shambhavi</h1>
 
@@ -131,12 +247,14 @@ footer{
     </div>
 
     <div class="rightDiv">
-        <img src="c:\Users\admin\Pictures\face image.jpg" alt="Profile Photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcXGVcpzrzrfPjE5zk6mT99-iPnr5TFToUEg&s" alt="Profile Photo">
     </div>
+
 </section>
 
-<section class="about">
+<section class="about" id="about">
     <h2>About Me</h2>
+
     <p>
         I am passionate about technology and web development.
         I am currently learning frontend development and working on academic projects.
@@ -144,8 +262,9 @@ footer{
     </p>
 </section>
 
-<section class="skills">
+<section class="skills" id="skills">
     <h2>Skills</h2>
+
     <ul>
         <li>HTML</li>
         <li>CSS</li>
@@ -154,23 +273,74 @@ footer{
     </ul>
 </section>
 
-<section class="projects">
+<section class="projects" id="projects">
     <h2>Projects</h2>
 
     <div class="project-card">
         <h3>Student Management System</h3>
-        <p>A python-based project for managing student records and information.</p>
+        <p>
+            A Python-based project for managing student records and information.
+        </p>
+    <button class="btn">Live Demo</button>
+    <button class="btn">Source Code</button>
     </div>
 
     <div class="project-card">
-        <h3>Good Website</h3>
-        <p>A responsive portfolio website developed using HTML and CSS.</p>
+        <h3>Portfolio Website</h3>
+        <p>
+            A responsive portfolio website developed using HTML and CSS.
+        </p>  
+    <button class="btn">Live Demo</button>
+    <button class="btn">Source Code</button>
     </div>
+
+    <div class="project-card">
+        <h3>Work Experience</h3>
+        <p>
+            Completed various certifications and academic projects.
+        </p>
+    <button class="btn">Live Demo</button>
+    <button class="btn">Source Code</button>
+    </div>
+
+</section>
+
+<section id="contact" class="registerForm">
+
+<input type="text"
+class="textDemo"
+placeholder="Enter your name">
+
+<input type="email"
+class="textDemo"
+placeholder="Enter your email">
+
+<textarea
+rows="6"
+class="textDemo"
+placeholder="Enter your message">
+</textarea>
+
+<button class="btn centerBTN">
+Submit
+</button>
+
 </section>
 
 <footer>
     <p>© 2026 Shambhavi | Portfolio</p>
 </footer>
+
+<div id="top"></div>
+<div class="topArrow">
+    <a href="#top" class="navItem">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
+</div>
+        
+    </div>
+
+
 
 </body>
 </html>
